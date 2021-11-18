@@ -7,13 +7,14 @@
 body{
     /* background-color: #242424; */
     cursor: pointer;
-    overflow: hidden;
 }
+
 :root{
     --color1:#f39b12;
     --color2:#C13A2A;
     --color3: #4CB963;
     --color4:#8E24AA;
+    --color5: #b3d4fc;
 }
 
 /* Navbar */
@@ -140,6 +141,11 @@ header {
     }
   }
 
+.title{
+  text-align: center;
+  margin-top: 30px;
+}
+
 /* Tarjetas */
 .box-cards{
     height: 500px;
@@ -148,6 +154,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
 }
 .box-cards .box{
     background-color: #fff;
@@ -179,6 +186,13 @@ header {
 .box4{
     border-top: 8px solid var(--color4);
     border-bottom:8px solid var(--color4);
+    transform: translateX(28em);
+    animation: primero .5s linear forwards;
+    margin: 15px;
+}
+.box5{
+    border-top: 8px solid var(--color5);
+    border-bottom:8px solid var(--color5);
     transform: translateX(28em);
     animation: primero .5s linear forwards;
     margin: 15px;
@@ -217,6 +231,9 @@ header {
 }
 .botton4{
     background-color: var(--color4);
+}
+.botton5{
+    background-color: var(--color5);
 }
 .box p{
     font-family: sans-serif;
