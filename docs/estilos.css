@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}  
+
+body{
+    /* background-color: #242424; */
+    cursor: pointer;
+    overflow: hidden;
+}
+:root{
+    --color1:#f39b12;
+    --color2:#C13A2A;
+    --color3: #4CB963;
+    --color4:#8E24AA;
+}
+
+/* Navbar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252a;
+    position: static;
+  }
+  
+  .logo {
+    cursor: pointer;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: #0088a9;
+  }
+  
+  .cta {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+  
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+
+/* Tarjetas */
+.box-cards{
+    height: 500px;
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box-cards .box{
+    background-color: #fff;
+    height: 450px;
+    width: 25%;
+    color: #fff;
+}
+.box1{
+    border-top: 8px solid var(--color1);
+    border-bottom:8px solid var(--color1); 
+    transform: translateX(-28em);
+    animation: primero .5s linear forwards;
+    margin: 15px;
+}
+.box2{
+    border-top: 8px solid var(--color2);
+    border-bottom:8px solid var(--color2);
+    transform: translateY(35em);
+    animation: primero .5s linear forwards;
+    margin: 15px;
+}
+.box3{
+    border-top: 8px solid var(--color3);
+    border-bottom:8px solid var(--color3);
+    transform: translateY(-35em);
+    animation: primero .5s linear forwards;
+    margin: 15px;
+}
+.box4{
+    border-top: 8px solid var(--color4);
+    border-bottom:8px solid var(--color4);
+    transform: translateX(28em);
+    animation: primero .5s linear forwards;
+    margin: 15px;
+}
+.box img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}   
+.box .botton{
+    padding: 10px;
+    width: 60%;
+    font-family: sans-serif;
+    text-align: center;
+    margin: -20px auto;
+    transition: .3s;
+    display: block;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.botton > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.botton1{
+    background-color: var(--color1);
+}
+.botton2{
+    background-color: var(--color2);
+}
+.botton3{
+    background-color: var(--color3);
+}
+.botton4{
+    background-color: var(--color4);
+}
+.box p{
+    font-family: sans-serif;
+    text-align: center;
+    color: #868686;
+    font-size: .9em;
+    width: 80%;
+    margin:50px auto;
+}
+.box:hover .botton{
+    transform: rotate(-10deg);
+}
+
+@keyframes primero{
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes segunda{
+    100%{
+        transform: translateY(0);
+    }
+}
